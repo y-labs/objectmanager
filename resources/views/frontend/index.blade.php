@@ -68,7 +68,6 @@
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <td>ID</td>
                     <td>Name</td>
                     <td>Description</td>
                     <td>Type</td>
@@ -77,7 +76,6 @@
                 <tbody>
                 @foreach($items as $item)
                     <tr>
-                        <td class="id-col">{{ $item->id }}</td>
                         <td class="name-col">{{ $item->name }}</td>
                         <td class="description-col">{{ $item->description }}</td>
                         <td class="type-col">{{ $item->type }}</td>
