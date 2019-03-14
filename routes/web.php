@@ -11,6 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::resource('items', 'ItemController');
+Route::get('items/{item}/relations', 'ItemController@relations')->name('items.relations');
+Route::get('relations/{relation}/delete', 'ItemController@destroyRelation')->name('items.destroyRelation');
+
+
+Route::resource('users', 'UserController');
+//Route::resource('devices', 'DeviceController');
+//Route::resource('servers', 'ServerController');
+//Route::resource('endpoints', 'EndpointController');
+
+
+Route::get('frontend/index', 'FrontendController@index')->name('gui.index');

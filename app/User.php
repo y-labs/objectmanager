@@ -2,28 +2,17 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Item;
 
-class User extends Authenticatable
+class User extends Item
 {
-    use Notifiable;
+    protected $table = "users";
 
     /**
-     * The attributes that are mass assignable.
      *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
-
-    /**
-     * The attributes that should be hidden for arrays.
+     *   This an other object type models were intended to extend the Item class
+     *  to restrict relations between objects, so a device can only be connected
+     *  to an User or a Server, but not directly to an Endpoint, for instance.
      *
-     * @var array
      */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
 }

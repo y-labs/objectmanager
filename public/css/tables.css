@@ -1,0 +1,41 @@
+.table {
+    color: whitesmoke;
+}
+
+table {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+table > tbody {
+    font-size: 1.3rem;
+}
+table td {
+    min-width: 20px;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+table td.id-col, table td.relation-id-col {
+    width: 2.5%
+}
+
+table td.name-col {
+    width: 20%
+}
+
+table td.description-col {
+    width: auto;
+}
+
+table td.type-col {
+    width: 7.5%;
+}
+
+table td.button-col {
+    min-width: 30px;
+    width: 5%;
+}
