@@ -11,6 +11,9 @@
 |
 */
 
+Route::get('/', function() {
+    return redirect()->route('items.index');
+});
 
 Route::resource('items', 'ItemController');
 Route::get('items/{item}/relations', 'ItemController@relations')->name('items.relations');
